@@ -1,5 +1,5 @@
 package com.entity;
-
+// 11111111111
 public class ResultData {
     private boolean state;
     private  String message;
