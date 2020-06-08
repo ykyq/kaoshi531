@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.TabElecinfoMapper">
+  <resultMap id="BaseResultMap" type="com.entity.TabElecinfo">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="elec_id" jdbcType="INTEGER" property="elecId" />
+    <result column="elec_month" jdbcType="VARCHAR" property="elecMonth" />
+    <result column="elec_sum" jdbcType="VARCHAR" property="elecSum" />
+    <result column="elec_money" jdbcType="VARCHAR" property="elecMoney" />
+    <result column="room_id" jdbcType="INTEGER" property="roomId" />
+    <result column="elec_state" jdbcType="VARCHAR" property="elecState" />
+  </resultMap>
+  <select id="selectElec" resultType="java.util.Map">
+    select * from tab_elecinfo a
+    join tab_room b  on a.room_id=b.room_id
+  </select>
+</mapper>
